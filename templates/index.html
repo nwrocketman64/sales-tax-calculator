@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Tax Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Sales Tax Calculator</h1>
+        </header>
+        <section>
+            <p>
+                Enter in the current sales tax, product's price, and amount of
+                the product to get the total cost.
+            </p>
+            {% if session.message %}
+            <p class="message">{{ session.message }}</p>
+            {% endif %}
+            <form action="/" method="POST">
+                <label for="price">Price ($): </label>
+                <input type="number" name="price" step="0.01" required>
+                <label for="amount">Amount of Products: </label>
+                <input type="number" name="amount" required>
+                <label for="tax">Sales Tax (%): </label>
+                <input type="number" name="tax" step="any" required>
+                <button type="submit">Calculate</button>
+            </form>
+            {% if session.total %}
+            <p>
+                Your Subtotal: {{ session.subtotal }}
+                <br>
+                Your Sales Tax: {{ session.taxAmount }}
+                <br>
+                Your Total: {{ session.total }}
+            </p>
+            {% endif %}
+        </section>
+        <footer>
+            CSE 310 - Applied Programming | &copy; 2021
+        </footer>
+    </main>
+</body>
+</html>
