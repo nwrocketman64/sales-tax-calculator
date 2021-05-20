@@ -28,3 +28,10 @@ with a few extentions to complete the project.
 
 * [Build a Python Web Server with Flask](https://projects.raspberrypi.org/en/projects/python-web-server-with-flask)
 * [Flask Tutorial](https://www.tutorialspoint.com/flask/index.htm)
+
+# Demo
+
+The application has been deployed to Heroku, here is the link below if
+you want to see a demo.
+
+[Demo of Sales Tax Calculator](https://desolate-depths-82613.herokuapp.com/)
