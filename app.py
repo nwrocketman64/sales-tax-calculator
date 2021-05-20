@@ -8,6 +8,7 @@ app = Flask(__name__)
 # Configure the sessions in the web app.
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
+app.secret_key = "\xd5$\xa2\xd5\xd8\x06\xab\xa4\xb5\x86\xec\xf1Tn[s"
 Session(app)
 
 # Define the main route as both a POST and GET route.
@@ -51,8 +52,8 @@ def index():
 # The 404 handler.
 @app.errorhandler(404)
 def not_found(e):
-  return render_template('404.html'), 404
+    return render_template('404.html'), 404
 
 # Start the web application.
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run()
