@@ -26,6 +26,5 @@ with a few extentions to complete the project.
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
 * [Build a Python Web Server with Flask](https://projects.raspberrypi.org/en/projects/python-web-server-with-flask)
 * [Flask Tutorial](https://www.tutorialspoint.com/flask/index.htm)
